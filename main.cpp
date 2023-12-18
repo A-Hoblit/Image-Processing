@@ -34,13 +34,23 @@ void testColorMask(Image test){
     redgreen.colorMask(1, 1, 0);
     redgreen.write("output/redgreen.png");
 }
+void testFlipping(Image test) {
+    Image flippedX = test;
+    flippedX.flipX();
+    flippedX.write("output/flippedX.png");
+
+    Image flippedY = test;
+    flippedY.flipY();
+    flippedY.write("output/flippedY.png");
+}
 
 int main(int argc, char** argv) {
     Image test("test.jpg");
 
     //testIO(test);
-    testGrayscale(test);
-    testColorMask(test);
+    //testGrayscale(test);
+    //testColorMask(test);
+    testFlipping(test);
 
     return 0;
 }

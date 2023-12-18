@@ -26,5 +26,16 @@ struct Image {
     Image& grayscale_lum();
 
     Image& colorMask(float r, float g, float b);
+
+    Image& flipX();
+    Image& flipY();
+
+
+
+/* Stegonography (hide messages in images)
+    Image& encodeMessage(const char* message);
+    Image& decodeMEssage(char* buffer, size_t* messageLength);
+*/
+
 };
 
