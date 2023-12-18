@@ -27,3 +27,4 @@ struct Image {
 
     Image& colorMask(float r, float g, float b);
 };
+

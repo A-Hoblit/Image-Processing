@@ -98,7 +98,7 @@
     }
 
     Image& Image::grayscale_lum(){
-        //normalized for the human eye
+        //Gamma expansion, normalized for the human eye
         if(channels < 3) {
             printf("Image %p has less than 3 channels, it is assumed to be already grayscale", this);
         }

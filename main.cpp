@@ -1,34 +1,46 @@
 #include "Image.h"
 
-int main(int argc, char** argv) {
-    Image test("test.jpg");
-
-    // Test color masking
-    test.colorMask(0, 1, 1);
-    test.write("blue.png");
-
-    // Test grayscale
-    /*
-    Image gray_avg = test;
-    gray_avg.grayscale_avg();
-    gray_avg.write("gray_avg.png");
-
-    Image gray_lum = test;
-    gray_lum.grayscale_lum();
-    gray_lum.write("gray_lum.png");
-    */
-
-    // Test reading, writing and creating
-    /*
-    test.write("new.png");
+void testIO(Image test) {
+    test.write("output/new.png");
     Image copy = test;
     for(int i=0; i<copy.w*copy.channels; ++i) {
         copy.data[i] = 255;
     }
-    copy.write("copy.png");
+    copy.write("output/copy.png");
 
     Image blank(100, 100, 3);
-    blank.write("blank.jpg");
-    */
+    blank.write("output/blank.jpg");  
+}
+
+void testGrayscale(Image test){
+    Image gray_avg = test;
+    gray_avg.grayscale_avg();
+    gray_avg.write("output/gray_avg.png");
+
+    Image gray_lum = test;
+    gray_lum.grayscale_lum();
+    gray_lum.write("output/gray_lum.png");
+}
+void testColorMask(Image test){
+    Image bluegreen = test;
+    bluegreen.colorMask(0, 1, 1);
+    bluegreen.write("output/bluegreen.png");
+
+    Image redblue = test;
+    redblue.colorMask(1, 0, 1);
+    redblue.write("output/redblue.png");
+
+    Image redgreen = test;
+    redgreen.colorMask(1, 1, 0);
+    redgreen.write("output/redgreen.png");
+}
+
+int main(int argc, char** argv) {
+    Image test("test.jpg");
+
+    //testIO(test);
+    testGrayscale(test);
+    testColorMask(test);
+
     return 0;
 }
