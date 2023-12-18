@@ -3,6 +3,12 @@
 int main(int argc, char** argv) {
     Image test("test.jpg");
 
+    // Test color masking
+    test.colorMask(0, 1, 1);
+    test.write("blue.png");
+
+    // Test grayscale
+    /*
     Image gray_avg = test;
     gray_avg.grayscale_avg();
     gray_avg.write("gray_avg.png");
@@ -10,11 +16,9 @@ int main(int argc, char** argv) {
     Image gray_lum = test;
     gray_lum.grayscale_lum();
     gray_lum.write("gray_lum.png");
+    */
 
-
-
-
-
+    // Test reading, writing and creating
     /*
     test.write("new.png");
     Image copy = test;
