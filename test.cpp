@@ -44,13 +44,44 @@ void testFlipping(Image test) {
     flippedY.write("output/flippedY.png");
 }
 
+void testConvolutionBlur(Image test) {
+    Image blurred = test;
+    double blur_kernel[9] = { 
+        1/9.0, 1/9.0, 1/9.0,
+        1/9.0, 1/9.0, 1/9.0,
+        1/9.0, 1/9.0, 1/9.0 
+    };
+
+    blurred.std_convolve_clamp_to_0(0, 3, 3, blur_kernel, 1, 1);
+    blurred.std_convolve_clamp_to_0(1, 3, 3, blur_kernel, 1, 1);
+    blurred.std_convolve_clamp_to_0(2, 3, 3, blur_kernel, 1, 1);
+    blurred.write("output/blurred.png");
+}
+
+void testConvolutionEmboss(Image test){
+    Image sharpened = test;
+	double emboss_kernel[9] = {
+		-2/9.0,-1/9.0, 0,
+		-1/9.0, 1/9.0, 1/9.0,
+		 0,     1/9.0, 2/9.0
+	};
+
+    sharpened.std_convolve_clamp_to_0(0, 3, 3, emboss_kernel, 1, 1);
+    sharpened.std_convolve_clamp_to_0(1, 3, 3, emboss_kernel, 1, 1);
+    sharpened.std_convolve_clamp_to_0(2, 3, 3, emboss_kernel, 1, 1);
+    sharpened.write("output/embossAll.png");
+}
+
 int main(int argc, char** argv) {
     Image test("test.jpg");
+    Image test2("test2.jpg");
 
     //testIO(test);
     //testGrayscale(test);
     //testColorMask(test);
-    testFlipping(test);
+    //testFlipping(test);
+    testConvolutionBlur(test);
+    testConvolutionEmboss(test2);
 
     return 0;
 }
