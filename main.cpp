@@ -25,7 +25,7 @@ void detectEdges(Image img) {
 		2/16., 4/16., 2/16.,
 		1/16., 2/16., 1/16.
 	};
-	gray_img.convolve_linear(0, 3, 3, gauss, 1, 1);
+	gray_img.std_convolve_clamp_to_0(0, 3, 3, gauss, 1, 1);
 	for(uint64_t k=0; k<img_size; ++k) {
 		blur_img.data[k] = gray_img.data[k];
 	}
