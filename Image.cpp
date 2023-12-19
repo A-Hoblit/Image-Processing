@@ -52,8 +52,6 @@ bool Image::write(const char* filename) {
         break;
     }
 
-    return success != 0;
-    /*
     if(success != 0) {
         printf("\e[32mWrote \e[36m%s\e[0m, %d, %d, %d, %zu\n", filename, w, h, channels, size);
         return true;
@@ -62,7 +60,7 @@ bool Image::write(const char* filename) {
         printf("\e[31;1m Failed to write \e[36m%s\e[0m, %d, %d, %d, %zu\n", filename, w, h, channels, size);
         return false;
     }
-    */
+
 
 }
 
