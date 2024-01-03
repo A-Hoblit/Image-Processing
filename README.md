@@ -20,5 +20,5 @@ Horizontal and Vertical edge detections
 
 Merged final image
 
-![input](https://github.com/A-Hoblit/Image-Processing/blob/main/output/3%20-%20G.png?raw=true)
+![input](https://github.com/A-Hoblit/Image-Processing/blob/main/output/4%20-%20G.png?raw=true)
 
