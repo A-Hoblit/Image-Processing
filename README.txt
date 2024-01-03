@@ -4,4 +4,4 @@ Convolution based Edge Detection in C++
 
 ## Screenshots
 
-![input](input.jpg?raw=true)
+![input](input.jpg?raw=true  "Title")
