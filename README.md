@@ -4,6 +4,8 @@ Convolution based Edge Detection in C++ and other simple image processing algori
 
 The main feature is the edge detection algorithm, but this project also includes grayscale, blurring, flipping and various convolution uses like embossing.
 
+Method: [Sobel Operator](https://en.wikipedia.org/wiki/Sobel_operator)
+
 ## Screenshots
 
 Initial Image
