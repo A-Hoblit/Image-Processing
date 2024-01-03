@@ -27,9 +27,13 @@ Merged final image
 ## Using this code
 
 1. Clone the repository
+
 `git clone https://github.com/A-Hoblit/Image-Processing.git`
+
 2. Compile main.cpp and image.cpp with your preferred C++ compiler, I used GCC
+
 `g++ main.cpp image.cpp`
+
 3. Place your input image "input.jpg" in the repository folder, replacing the default one, and run. All output images are deposited in the output folder.
 
 Other simple image processing uses can be found in the test.cpp file.
