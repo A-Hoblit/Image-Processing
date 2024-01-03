@@ -22,3 +22,5 @@ Merged final image
 
 ![input](https://github.com/A-Hoblit/Image-Processing/blob/main/output/4%20-%20G.png?raw=true)
 
+## Using this code
+
