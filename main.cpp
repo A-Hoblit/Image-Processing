@@ -168,7 +168,7 @@ void detectEdges(Image img) {
 
 int main(int argc, char** argv) {
 
-    Image img("test2.jpg");
+    Image img("chess.jpg");
     detectEdges(img);
 
 	return 0;
